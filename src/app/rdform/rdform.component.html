@@ -1,0 +1,28 @@
+
+<div class="rdt">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <form [formGroup]="loginForm">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email address</label>
+                        <span class="error" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.untouched">*</span>
+                        <input type="email" class="form-control" placeholder="Enter Email" formControlName="email" name="email" >
+                        <span class="error" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">Email is Requried</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputPassword1" class="form-label">Password</label>
+                        <span class="error" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.untouched">*</span>
+                        <input type="password" class="form-control" placeholder="Enter Email" formControlName="pswd" name="pswd">
+                        <span class="error" *ngIf="loginForm.get('pswd')?.invalid && loginForm.get('pswd')?.touched">pass is Requried</span>
+            
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+        
+        
+        </div>
+</div>
